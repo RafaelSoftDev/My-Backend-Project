@@ -3,5 +3,5 @@
 Integrantes:
 -Rafael Imanol Gomero Mendoza
 -Piero Jose Guillen Soaña
--Jorge Enrique Mamani Escobedo
+-Mamani Escobedo Jorge Enrique
 -Derek Mauricio Loayza Chuquicaña
