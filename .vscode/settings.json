@@ -3,11 +3,15 @@
         "categoria",
         "categorias",
         "Chuquicaña",
+        "direccion",
+        "Direccion",
         "Escobedo",
+        "Guillen",
         "Imanol",
         "Loayza",
         "Mamani",
         "Piero",
-        "Guillen"
+        "telefono",
+        "Telefono"
     ]
 }
