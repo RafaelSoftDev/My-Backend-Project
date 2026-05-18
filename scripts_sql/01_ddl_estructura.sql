@@ -58,6 +58,14 @@ CREATE TABLE smartphone{
         FOREIGN KEY (id_cat) REFERENCES categoria(id_cat)
 };
 
+-- Sexta entidad: Sucursal
+CREATE TABLE Sucursal{
+    id_sue SERIAL PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL UNIQUE,
+    direccion VARCHAR(100) NOT NULL UNIQUE,
+    telefono VARCHAR(20) NOT NULL UNIQUE
+};
+
 --Novena entidad: Employees
 CREATE TABLE employees(
     id_emp SERIAL PRIMARY KEY,
