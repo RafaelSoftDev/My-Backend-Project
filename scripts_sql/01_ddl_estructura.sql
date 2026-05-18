@@ -31,6 +31,13 @@ CREATE TABLE Categoria{
     nombre VARCHAR(50) NOT NULL UNIQUE
 };
 
+-- Cuarta entidad: Marca
+CREATE TABLE Marca{
+    id_marca INT PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL UNIQUE
+};
+
+
 --Novena entidad: Employees
 CREATE TABLE employees(
     id_emp SERIAL PRIMARY KEY,
