@@ -30,11 +30,24 @@ CREATE TABLE employees(
     id_emp SERIAL PRIMARY KEY,
     nombre VARCHAR(50) NOT NULL,
     apellido VARCHAR(50) NOT NULL,
-    dni VARCHAR(10) NOT NULL UNIQUE
+    dni VARCHAR(10) NOT NULL UNIQUE,
 
 
     --llaves foraneas
     id_suc INT NOT NULL REFERENCES sucursal(id_suc),
     id_cargo INT NOT NULL REFERENCES cargo(id_cargo)
+);
+
+--Decima entidad: Cabecera_venta
+CREATE TABLE cabecera_venta(
+    id_venta SERIAL PRIMARY KEY,
+    fecha DATE,
+    total INT NOT NULL,
+
+
+    --llaves foraneas
+    id_cli INT NOT NULL REFERENCES cliente(id_cli),
+    id_emp INT NOT NULL REFERENCES employees(id_emp),
+    id_suc INT NOT NULL REFERENCES sucursal(id_suc)
 );
 
