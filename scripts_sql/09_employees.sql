@@ -1,0 +1,6 @@
+CREATE TABLE employees(
+    id_emp SERIAL PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    apellido VARCHAR(50) NOT NULL,
+    dni VARCHAR(10) NOT NULL UNIQUE
+);
