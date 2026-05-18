@@ -61,3 +61,11 @@ CREATE TABLE detalle_venta(
     id_smart INT NOT NULL REFERENCES smartphone(id_smart),
     id_venta INT NOT NULL REFERENCES cabecera_venta(id_venta)
 );
+
+--Duodecima entidad: Metodo_pago
+CREATE TABLE metodo_pago(
+    id_mpago SERIAL PRIMARY KEY,
+    descripcion VARCHAR(50) NOT NULL
+);
+
+
