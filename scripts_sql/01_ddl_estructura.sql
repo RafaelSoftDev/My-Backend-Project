@@ -25,6 +25,12 @@ CREATE TABLE proveedor (
     direccion VARCHAR(200)
 );
 
+-- Tercera entidad: Categoría
+CREATE TABLE Categoria{
+    id_cat INT PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL UNIQUE
+};
+
 --Novena entidad: Employees
 CREATE TABLE employees(
     id_emp SERIAL PRIMARY KEY,
@@ -33,36 +39,36 @@ CREATE TABLE employees(
     dni VARCHAR(10) NOT NULL UNIQUE,
 
 
-    --llaves foraneas
+    --llaves foráneas
     id_suc INT NOT NULL REFERENCES sucursal(id_suc),
     id_cargo INT NOT NULL REFERENCES cargo(id_cargo)
 );
 
---Decima entidad: Cabecera_venta
+--Décima entidad: Cabecera_venta
 CREATE TABLE cabecera_venta(
     id_venta SERIAL PRIMARY KEY,
     fecha DATE,
     total INT NOT NULL,
 
 
-    --llaves foraneas
+    --llaves foráneas
     id_cli INT NOT NULL REFERENCES cliente(id_cli),
     id_emp INT NOT NULL REFERENCES employees(id_emp),
     id_suc INT NOT NULL REFERENCES sucursal(id_suc)
 );
 
---Undecima entidad: Detalle_venta
+--Undécima entidad: Detalle_venta
 CREATE TABLE detalle_venta(
     id_detalle SERIAL PRIMARY KEY,
     cantidad INT NOT NULL,
     precio_unitario INT NOT NULL,
 
-    --llaves foraneas
+    --llaves foráneas
     id_smart INT NOT NULL REFERENCES smartphone(id_smart),
     id_venta INT NOT NULL REFERENCES cabecera_venta(id_venta)
 );
 
---Duodecima entidad: Metodo_pago
+--Duodécima entidad: Metodo_pago
 CREATE TABLE metodo_pago(
     id_mpago SERIAL PRIMARY KEY,
     descripcion VARCHAR(50) NOT NULL
@@ -73,19 +79,19 @@ CREATE TABLE pago_venta (
     id_pago SERIAL PRIMARY KEY,
     monto DECIMAL(12,2) NOT NULL,
 
-    -- llaves foraneas (hereda de la factura de venta y del metodo de pago)
+    -- llaves foráneas (hereda de la factura de venta y del metodo de pago)
     id_venta INT NOT NULL REFERENCES cabecera_venta(id_venta),
     id_mpago INT NOT NULL REFERENCES metodo_pago(id_mpago)
 );
 
--- 13ava entidad: garantia
+-- 13ava entidad: garantía
 CREATE TABLE garantia (
     id_gar SERIAL PRIMARY KEY,
     fecha_inicio DATE NOT NULL,
     fecha_fin DATE NOT NULL,
     condiciones TEXT,
 
-    -- llave foranea (hereda del detalle de venta)
+    -- llave foránea (hereda del detalle de venta)
     id_detalle INT NOT NULL REFERENCES detalle_venta(id_detalle)
 );
 
@@ -95,7 +101,7 @@ CREATE TABLE cabecera_compra (
     fecha DATE NOT NULL,
     total DECIMAL(12,2) NOT NULL DEFAULT 0.00,
 
-    -- llaves foraneas (hereda de proveedor y sucursal)
+    -- llaves foráneas (hereda de proveedor y sucursal)
     id_prov INT NOT NULL REFERENCES proveedor(id_prov),
     id_suc INT NOT NULL REFERENCES sucursal(id_suc) 
 );
@@ -106,7 +112,7 @@ CREATE TABLE detalle_compra (
     cantidad INT NOT NULL,
     precio_unitario DECIMAL(10,2) NOT NULL,
 
-    -- llaves foraneas (hereda de la compra y del celular)
+    -- llaves foráneas (hereda de la compra y del celular)
     id_compra INT NOT NULL REFERENCES cabecera_compra(id_compra),
     id_smart INT NOT NULL REFERENCES smartphone(id_smart)
 );
