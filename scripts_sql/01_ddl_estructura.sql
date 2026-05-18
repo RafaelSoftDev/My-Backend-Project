@@ -31,4 +31,10 @@ CREATE TABLE employees(
     nombre VARCHAR(50) NOT NULL,
     apellido VARCHAR(50) NOT NULL,
     dni VARCHAR(10) NOT NULL UNIQUE
+
+
+    --llaves foraneas
+    id_suc INT NOT NULL REFERENCES sucursal(id_suc),
+    id_cargo INT NOT NULL REFERENCES cargo(id_cargo)
 );
+
