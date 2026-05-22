@@ -6,6 +6,10 @@ VALUES
     ('Pedidos SAC', 'Parque Industrial N2', '994720860'),
     ('Fast SAC', 'Av. Arequipa 333', '954108721'),
     ('International SAC', 'Parque Industrial N3', '978410635');
+-- Update sucursal
+UPDATE sucursal
+SET telefono = '971085462'
+WHERE nombre = 'Fast SAC';
 
 -- Poblando tabla smartphone
 INSERT INTO smartphone(modelo, precio, stock, especificaciones, id_marca, id_cat)
