@@ -9,12 +9,12 @@ VALUES
 	('Jorge','Justo',55832552);
 
 
---Poblando tabla cabecera_venta
-INSERT INTO cabecera_venta(fecha,total)
+--Poblando tabla metodo_pago
+INSERT INTO metodo_pago(descripcion)
 VALUES
-	('2026-05-20',12),
-	('2026-05-20',11),
-	('2026-05-20',29),	
-	('2026-03-21',10),
-	('2026-03-22',23);
+	('efectivo'),
+	('yape'),
+	('tarjeta visa'),	
+	('tarjeta bcp'),
+	('trueque');
 
