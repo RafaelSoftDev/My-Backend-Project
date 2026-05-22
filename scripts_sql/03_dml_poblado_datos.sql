@@ -63,3 +63,13 @@ VALUES
 UPDATE proveedor
 Set direccion='Pekin', email = 'pekin.gao@gmail.com'
 WHERE nombre='Bao import';
+
+
+--Poblando tabla cliente
+INSERT INTO cliente(nombre,apellido,dni,telefono,email,direccion)
+VALUES 
+('Juan','Valdez',60042121,967927834,'juanvaldez1@gmail.com','Puno' ),
+('Pedro','Palomar',64048309,916370376,'pedropalomar67@gmail.com','Madre de Dios'),
+('Pablo','Mendoza',65848292,960183715,'pablomendoza57@gmail.com','Junin '),
+('Matias','Espinoza',61098132,964975139,'matiasespinoza73@gmail.com','Lima '),
+('Diego','Quispe',62048177,969073812,'diegoquispe01@gmail.com','Trujillo ');
