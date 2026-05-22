@@ -47,3 +47,14 @@ VALUES
 UPDATE employees
 SET id_suc=1
 WHERE id_emp=2;
+
+
+
+--Poblando tabla metodo_pago
+INSERT INTO proveedor(nombre,ruc,telefono,email,direccion)
+VALUES 
+('Bao import',36584612683,957281463,'bao.import67@gmail.com','Shanghái' ),
+('Qiang import',57149376105,914672083,'qiang.import57@gmail.com','Shanghái '),
+('Shangdu import',94712947262,961872034,'shangdu.import41@gmail.com','Shanghái '),
+('Chang import',19295725492,994719853,'chang.import95@gmail.com','Shanghái '),
+('Ming import',20586283720,940274876,'ming.import26@gmail.com','Shanghái ');
