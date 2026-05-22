@@ -36,3 +36,6 @@ VALUES
 	('tarjeta bcp'),
 	('trueque');
 
+UPDATE employees
+SET id_suc=1
+WHERE id_emp=2;
