@@ -50,7 +50,7 @@ WHERE id_emp=2;
 
 
 
---Poblando tabla metodo_pago
+--Poblando tabla proveedor
 INSERT INTO proveedor(nombre,ruc,telefono,email,direccion)
 VALUES 
 ('Bao import',36584612683,957281463,'bao.import67@gmail.com','Shanghái' ),
@@ -58,3 +58,8 @@ VALUES
 ('Shangdu import',94712947262,961872034,'shangdu.import41@gmail.com','Shanghái '),
 ('Chang import',19295725492,994719853,'chang.import95@gmail.com','Shanghái '),
 ('Ming import',20586283720,940274876,'ming.import26@gmail.com','Shanghái ');
+
+
+UPDATE proveedor
+Set direccion='Pekin', email = 'pekin.gao@gmail.com'
+WHERE nombre='Bao import';
