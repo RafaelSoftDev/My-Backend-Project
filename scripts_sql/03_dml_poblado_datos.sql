@@ -19,16 +19,11 @@ VALUES
 --Poblando tabla employees
 INSERT INTO employees(nombre,apellido,dni,id_suc,id_cargo)
 VALUES
-	('Ana','Vargas',55632552,(SELECT id_suc FROM Sucursal WHERE nombre = 'Fong SAC'), 
-        (SELECT id_cargo FROM cargo WHERE nombre = 'Administrador')),
-	('Juan','Flores',55332552,(SELECT id_suc FROM Sucursal WHERE nombre = 'International SAC'), 
-        (SELECT id_cargo FROM cargo WHERE nombre = 'Administrador')),
-	('Dario','Guillen',55932552,(SELECT id_suc FROM Sucursal WHERE nombre = 'MiTienda SAC'), 
-        (SELECT id_cargo FROM cargo WHERE nombre = 'Administrador')),
-	('Dante','Lopez',55932552,(SELECT id_suc FROM Sucursal WHERE nombre = 'Fong SAC'), 
-        (SELECT id_cargo FROM cargo WHERE nombre = 'Administrador')),	
-	('Jorge','Justo',55832552,(SELECT id_suc FROM Sucursal WHERE nombre = 'Sucursal Centro'), 
-        (SELECT id_cargo FROM cargo WHERE nombre = 'Administrador'));
+	('Ana','Vargas',55632552,1,1),
+	('Juan','Flores',55332552,2,2),
+	('Dario','Guillen',55932552,3,3),
+	('Dante','Lopez',55932552,4,4),	
+	('Jorge','Justo',55832552,5,5);
 
 
 
