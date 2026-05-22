@@ -19,6 +19,10 @@ VALUES
     ('ZTE Lite', 200.50, 100, 'Modelo medio-baja gama', 3, 3),
     ('Iphone 17', 500.00, 20, 'Modelo alta gama', 4, 1),
     ('LG Series 7', 180.50, 150, 'Modelo baja gama', 5, 4);
+-- Update smarthpone
+UPDATE smartphone
+SET stock = 35, precio = 450.50
+WHERE modelo = 'Iphone 17';
 
 --Poblando tabla employees
 INSERT INTO employees(nombre,apellido,dni,id_suc,id_cargo)
